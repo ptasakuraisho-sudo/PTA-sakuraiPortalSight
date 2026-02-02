@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>桜井小学校PTA 動画ポータル</title>
+<style>
+body { font-family:sans-serif; padding:20px; }
+h1 { text-align:center; }
+.notice {
+  background:#f0f7ff;
+  border-left:5px solid #4a90e2;
+  padding:10px;
+  margin-bottom:15px;
+}
+table { border-collapse:collapse; width:100%; margin-bottom:20px; }
+th, td { border:1px solid #ccc; padding:8px; }
+th { background:#f0f0f0; }
+tr { transition:0.2s; }
+tr:hover { background:#e6f2ff; cursor:pointer; }
+
+#detailBox {
+  border:1px solid #999;
+  padding:15px;
+  background:#fafafa;
+  display:none;
+}
+
+button {
+  padding:8px 14px;
+  margin-right:10px;
+  font-size:14px;
+}
+a { color:blue; }
+</style>
+</head>
+<body>
+
+<h1>桜井小学校PTA 動画一覧</h1>
+
+<div class="notice">
+<b>見たい動画を選択してください。</b><br>
+内容詳細が下部に表示されます。
+</div>
+
+<table>
+<tr>
+<th>No</th>
+<th>動画タイトル</th>
+<th>視聴リンク</th>
+<th>更新日</th>
+</tr>
+
+<tr onclick="showDetail(1)"><td>1</td><td>【PTAの仕組み】桜井小学校PTAのご案内</td><td>▶ 視聴可</td><td>2025/12/18</td></tr>
+<tr onclick="showDetail(2)"><td>2</td><td>姫小川地区抽選動画</td><td>▶ 視聴可</td><td>2025/12/23</td></tr>
+<tr onclick="showDetail(3)"><td>3</td><td>桜西地区抽選動画</td><td>▶ 視聴可</td><td>2025/12/23</td></tr>
+<tr onclick="showDetail(4)"><td>4</td><td>令和8年度 役員・実行委員ご検討の皆様へ</td><td>▶ 視聴可</td><td>2025/12/24</td></tr>
+<tr onclick="showDetail(5)"><td>5</td><td>PTA役員・実行委員の仕事は実は楽</td><td>▶ 視聴可</td><td>2026/1/20</td></tr>
+<tr onclick="showDetail(6)"><td>6</td><td>県P連総会に参加して</td><td>▶ 視聴可</td><td>2026/1/27</td></tr>
+<tr onclick="showDetail(7)"><td>7</td><td>市P連活動に参加して</td><td>▶ 視聴可</td><td>2026/1/27</td></tr>
+<tr onclick="showDetail(8)"><td>8</td><td>オンラインPTA総会の提案発議と結果</td><td>▶ 視聴可</td><td>2026/1/31</td></tr>
+<tr onclick="showDetail(9)"><td>9</td><td>オンラインPTA総会の提案（解説版）</td><td>▶ 視聴可</td><td>2026/1/31</td></tr>
+</table>
+
+<div id="detailBox"></div>
+
+<script>
+const videos = {
+1:{title:"【PTAの仕組み】桜井小学校PTAのご案内",desc:"桜井小学校PTAの活動や仕組みの説明",pdf:"https://drive.google.com/drive/folders/1dtmnxDylCAANJa4_iZY-g__dq0yOJalS?usp=drive_link",target:"誰でも",time:"6:12",date:"2025/12/18",url:"https://youtu.be/DGjPws-Kegs"},
+2:{title:"姫小川地区抽選動画",desc:"実行委員と会計のオンライン抽選",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=sharing",target:"令和7年度姫小川地区",time:"8:02",date:"2025/12/23",url:"https://youtu.be/geBIabDK8P0"},
+3:{title:"桜西地区抽選動画",desc:"実行委員と会長のオンライン抽選",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=sharing",target:"令和7年度桜西地区",time:"7:33",date:"2025/12/23",url:"https://youtu.be/kUIrN4r3Y64"},
+4:{title:"令和8年度 役員・実行委員ご検討の皆様へ",desc:"実行委員の役割説明",pdf:"https://drive.google.com/drive/folders/1fAkWKWi8kWKUT6icItXxDvdAlhMqUMxD?usp=drive_link",target:"令和8年度役員実行委員",time:"21:44",date:"2025/12/24",url:"https://youtu.be/StwyuHXAQBo"},
+5:{title:"PTA役員・実行委員の仕事は実は楽",desc:"PTAは意外と負担が軽い話",pdf:"https://drive.google.com/drive/folders/1dtmnxDylCAANJa4_iZY-g__dq0yOJalS?usp=drive_link",target:"誰でも",time:"8:09",date:"2026/1/20",url:"https://youtu.be/TXT9hkzWSAM"},
+6:{title:"県P連総会に参加して",desc:"県P連参加後の所感",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"9:19",date:"2026/1/27",url:"https://youtu.be/HyqZhHGaw3I"},
+7:{title:"市P連活動に参加して",desc:"市P連活動についての見解",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"7:44",date:"2026/1/27",url:"https://youtu.be/mL67BcglQIg"},
+8:{title:"オンラインPTA総会の提案発議と結果",desc:"提案経緯と結果の説明",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"7:41",date:"2026/1/31",url:"https://youtu.be/8MEvwYcFYx4"},
+9:{title:"オンラインPTA総会の提案（解説版）",desc:"NotebookLMによる解説",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"8:07",date:"2026/1/31",url:"https://youtu.be/7Gr9Zgtu6t4"}
+};
+
+function showDetail(id){
+const v = videos[id];
+const box = document.getElementById("detailBox");
+box.style.display="block";
+box.innerHTML = `
+
+<div style="background:#fff3cd; border:2px solid #ffcc00; padding:15px; margin-bottom:15px; text-align:center;">
+  <b style="font-size:18px;">🎬 この動画を視聴しますか？</b><br><br>
+  <button onclick="window.open('${v.url}','_blank')" style="font-size:16px; padding:10px 20px;">▶ はい、視聴する</button>
+  <button onclick="hideDetail()" style="font-size:16px; padding:10px 20px;">閉じる</button>
+</div>
+
+<h3>${v.title}</h3>
+
+<b>内容：</b><br>${v.desc}<br><br>
+
+<b>資料ダウンロード：</b><br>
+<a href="${v.pdf}" target="_blank">${v.pdf}</a><br><br>
+
+<b>対象：</b> ${v.target}<br>
+<b>動画時間：</b> ${v.time}<br>
+<b>更新日：</b> ${v.date}
+
+`;
+}
+
+function hideDetail(){
+document.getElementById("detailBox").style.display="none";
+}
+</script>
+
+</body>
+</html>
