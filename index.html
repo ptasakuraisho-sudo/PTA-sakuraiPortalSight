@@ -51,31 +51,34 @@ a { color:blue; }
 </tr>
 
 <tr onclick="showDetail(1)"><td>1</td><td>【PTAの仕組み】桜井小学校PTAのご案内</td><td>▶ 視聴可</td><td>2025/12/18</td></tr>
-<tr onclick="showDetail(2)"><td>2</td><td>姫小川地区抽選動画</td><td>▶ 視聴可</td><td>2025/12/23</td></tr>
-<tr onclick="showDetail(3)"><td>3</td><td>桜西地区抽選動画</td><td>▶ 視聴可</td><td>2025/12/23</td></tr>
-<tr onclick="showDetail(4)"><td>4</td><td>令和8年度 役員・実行委員ご検討の皆様へ</td><td>▶ 視聴可</td><td>2025/12/24</td></tr>
-<tr onclick="showDetail(5)"><td>5</td><td>PTA役員・実行委員の仕事は実は楽</td><td>▶ 視聴可</td><td>2026/1/20</td></tr>
-<tr onclick="showDetail(6)"><td>6</td><td>県P連総会に参加して</td><td>▶ 視聴可</td><td>2026/1/27</td></tr>
-<tr onclick="showDetail(7)"><td>7</td><td>市P連活動に参加して</td><td>▶ 視聴可</td><td>2026/1/27</td></tr>
-<tr onclick="showDetail(8)"><td>8</td><td>オンラインPTA総会の提案発議と結果</td><td>▶ 視聴可</td><td>2026/1/31</td></tr>
-<tr onclick="showDetail(9)"><td>9</td><td>オンラインPTA総会の提案（解説版）</td><td>▶ 視聴可</td><td>2026/1/31</td></tr>
-<tr onclick="showDetail(10)"><td>10</td><td>子ども会との関係</td><td>▶ 視聴可</td><td>2026/2/16</td></tr>
+<tr onclick="showDetail(2)"><td>2</td><td>【令和７年度の活動】姫小川地区抽選動画</td><td>▶ 視聴可</td><td>2025/12/23</td></tr>
+<tr onclick="showDetail(3)"><td>3</td><td>【令和７年度の活動】桜西地区抽選動画</td><td>▶ 視聴可</td><td>2025/12/23</td></tr>
+<tr onclick="showDetail(4)"><td>4</td><td>【令和8年度への引継ぎ】令和8年度 桜井小学校PTA 役員・実行委員ご検討の皆様へ</td><td>▶ 視聴可</td><td>2025/12/24</td></tr>
+<tr onclick="showDetail(5)"><td>5</td><td>【PTAの仕組み】PTA役員・実行委員の仕事内容が「実は楽である」</td><td>▶ 視聴可</td><td>2026/1/20</td></tr>
+<tr onclick="showDetail(6)"><td>6</td><td>【令和７年度の活動】県P連総会に参加して</td><td>▶ 視聴可</td><td>2026/1/27</td></tr>
+<tr onclick="showDetail(7)"><td>7</td><td>【令和７年度の活動】市P連総活動に参加して</td><td>▶ 視聴可</td><td>2026/1/27</td></tr>
+<tr onclick="showDetail(8)"><td>8</td><td>【令和７年度の活動】オンラインPTA総会の提案発議と結果</td><td>▶ 視聴可</td><td>2026/1/31</td></tr>
+<tr onclick="showDetail(9)"><td>9</td><td>【令和７年度の活動】オンラインPTA総会の提案</td><td>▶ 視聴可</td><td>2026/1/31</td></tr>
+<tr onclick="showDetail(10)"><td>10</td><td>【令和７年度の活動】子ども会との関係について</td><td>▶ 視聴可</td><td>2026/2/16</td></tr>
 </table>
 
 <div id="detailBox"></div>
 
 <script>
 const videos = {
-1:{title:"【PTAの仕組み】桜井小学校PTAのご案内",desc:"桜井小学校PTAの活動や仕組みの説明",pdf:"https://drive.google.com/drive/folders/1dtmnxDylCAANJa4_iZY-g__dq0yOJalS?usp=drive_link",target:"誰でも",time:"6:12",date:"2025/12/18",url:"https://youtu.be/DGjPws-Kegs"},
-2:{title:"姫小川地区抽選動画",desc:"実行委員と会計のオンライン抽選",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=sharing",target:"令和7年度姫小川地区",time:"8:02",date:"2025/12/23",url:"https://youtu.be/geBIabDK8P0"},
-3:{title:"桜西地区抽選動画",desc:"実行委員と会長のオンライン抽選",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=sharing",target:"令和7年度桜西地区",time:"7:33",date:"2025/12/23",url:"https://youtu.be/kUIrN4r3Y64"},
-4:{title:"令和8年度 役員・実行委員ご検討の皆様へ",desc:"実行委員の役割説明",pdf:"https://drive.google.com/drive/folders/1fAkWKWi8kWKUT6icItXxDvdAlhMqUMxD?usp=drive_link",target:"令和8年度役員実行委員",time:"21:44",date:"2025/12/24",url:"https://youtu.be/StwyuHXAQBo"},
-5:{title:"PTA役員・実行委員の仕事は実は楽",desc:"PTAは意外と負担が軽い話",pdf:"https://drive.google.com/drive/folders/1dtmnxDylCAANJa4_iZY-g__dq0yOJalS?usp=drive_link",target:"誰でも",time:"8:09",date:"2026/1/20",url:"https://youtu.be/TXT9hkzWSAM"},
-6:{title:"県P連総会に参加して",desc:"県P連参加後の所感",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"9:19",date:"2026/1/27",url:"https://youtu.be/HyqZhHGaw3I"},
-7:{title:"市P連活動に参加して",desc:"市P連活動についての見解",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"7:44",date:"2026/1/27",url:"https://youtu.be/mL67BcglQIg"},
-8:{title:"オンラインPTA総会の提案発議と結果",desc:"提案経緯と結果の説明",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"7:41",date:"2026/1/31",url:"https://youtu.be/8MEvwYcFYx4"},
-9:{title:"オンラインPTA総会の提案（解説版）",desc:"NotebookLMによる解説",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"8:07",date:"2026/1/31",url:"https://youtu.be/7Gr9Zgtu6t4"},
-10:{title:"子ども会との関係について",desc:"子ども会との関係",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"8:06",date:"2026/2/16",url:"https://youtu.be/YLwCS05oCxI"},
+1:{title:"【PTAの仕組み】桜井小学校PTAのご案内",desc:"桜井小学校PTAの活動や仕組みについて説明しています。
+★配布された資料を基に、AIにまとめさせましたので、綺麗ごとが並んでいます。ご注意ください
+★「AIだから間違いがある」のではなく、これまでのPTA活動や組織構造そのものに、現状にそぐわない、改善すべき点や廃止すべき点があるためです。
+★役員と実行委員に選出された人たちや、これから関わろうとする人たちが読んだときに、なんとなくイメージの助けになるかなと思い、作成しています。",pdf:"https://drive.google.com/drive/folders/1dtmnxDylCAANJa4_iZY-g__dq0yOJalS?usp=drive_link",target:"誰でも",time:"6:12",date:"2025/12/18",url:"https://youtu.be/DGjPws-Kegs"},
+2:{title:"【令和７年度の活動】姫小川地区抽選動画",desc:"姫小川地区の実行委員と会計を選出したオンラインルーレットです",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=sharing",target:"令和7年度姫小川地区",time:"8:02",date:"2025/12/23",url:"https://youtu.be/geBIabDK8P0"},
+3:{title:"【令和７年度の活動】桜西地区抽選動画",desc:"桜西地区の実行委員と会長を選出したオンラインルーレットです",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=sharing",target:"令和7年度桜西地区",time:"7:33",date:"2025/12/23",url:"https://youtu.be/kUIrN4r3Y64"},
+4:{title:"【令和8年度への引継ぎ】令和8年度 桜井小学校PTA 役員・実行委員ご検討の皆様へ",desc:"特に、実行委員に選出はされたけれど、どれにしようかと考えている方への説明としての動画です。",pdf:"https://drive.google.com/drive/folders/1fAkWKWi8kWKUT6icItXxDvdAlhMqUMxD?usp=drive_link",target:"令和8年度役員実行委員",time:"21:44",date:"2025/12/24",url:"https://youtu.be/StwyuHXAQBo"},
+5:{title:"【PTAの仕組み】PTA役員・実行委員の仕事内容が「実は楽である」",desc:"PTAやるほうが楽なのになぁ。。。という動画です",pdf:"https://drive.google.com/drive/folders/1dtmnxDylCAANJa4_iZY-g__dq0yOJalS?usp=drive_link",target:"誰でも",time:"8:09",date:"2026/1/20",url:"https://youtu.be/TXT9hkzWSAM"},
+6:{title:"【令和７年度の活動】県P連総会に参加して",desc:"県Ｐ連に参加しての不満です",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"9:19",date:"2026/1/27",url:"https://youtu.be/HyqZhHGaw3I"},
+7:{title:"【令和７年度の活動】市P連総活動に参加して",desc:"市Ｐ連の活動に参加しての見解です",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"7:44",date:"2026/1/27",url:"https://youtu.be/mL67BcglQIg"},
+8:{title:"【令和７年度の活動】オンラインPTA総会の提案発議と結果",desc:"戸田による音声説明です。オンラインPTA総会の提案発議、経緯も含めて説明しています。最後にオンラインPTA総会の結果も載せてあります",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"7:41",date:"2026/1/31",url:"https://youtu.be/8MEvwYcFYx4"},
+9:{title:"【令和７年度の活動】オンラインPTA総会の提案",desc:"Google notebook LMによる動画解説です。オンラインPTA総会のについての動画です",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"8:07",date:"2026/1/31",url:"https://youtu.be/7Gr9Zgtu6t4"},
+10:{title:"【令和７年度の活動】子ども会との関係について",desc:"子ども会の方々から「子ども会会則の中のＰＴＡに関する記載をどうすればいいの？」という質問が多くありました。その解答になる動画です。",pdf:"https://drive.google.com/drive/folders/10q0nBuA8wpLtfdKabPsFMzQMH2I__UB1?usp=drive_link",target:"誰でも",time:"8:06",date:"2026/2/16",url:"https://youtu.be/YLwCS05oCxI"},
 };
 
 function showDetail(id){
@@ -111,4 +114,5 @@ document.getElementById("detailBox").style.display="none";
 
 </body>
 </html>
+
 
